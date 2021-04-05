@@ -3,7 +3,7 @@
 
 Notes:
 
-```
+
 
 Nodepool management:
 
@@ -18,6 +18,7 @@ NAME          MACHINE_TYPE  DISK_SIZE_GB  NODE_VERSION
 default-pool  e2-medium     100           1.17.17-gke.1101
 
 ```
+
 ```
 gcloud container node-pools create foo-pool --cluster test-cluster --zone europe-central2-a
 
@@ -26,6 +27,7 @@ Creating node pool foo-pool...done.
 Created [https://container.googleapis.com/v1/projects/inspiring-cat-308916/zones/europe-central2-a/clusters/test-cluster/nodePools/foo-pool].
 NAME      MACHINE_TYPE  DISK_SIZE_GB  NODE_VERSION
 foo-pool  e2-medium     100           1.17.17-gke.1101
+
 ```
 Turn on autoscaling on the node pool:
 ```
@@ -43,6 +45,7 @@ Do you want to continue (Y/n)?
 ```
 
 Create node-pool of specified machine type:
+
 ```
 gcloud container node-pools create foo-pool --machine-type=n1-standard-4 --enable-autoscaling --max-nodes=6 --min-nodes=3  --cluster test-cluster --zone europe-central2-a
 ```
