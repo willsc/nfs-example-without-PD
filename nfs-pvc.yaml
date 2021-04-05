@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nfs-vol-pvc
+spec:
+  storageClassName: repd-west2-b-c
+  resources:
+    requests:
+      storage: 200Gi
+  accessModes:
+    - ReadWriteOnce
